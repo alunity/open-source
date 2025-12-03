@@ -20,8 +20,9 @@ jobs:
         uses: actions/jekyll-build-pages@v1
       - name: Reshape
         run: |
-          sudo mkdir _site/open-source 
-          sudo mv _site/* _site/open-source
+          sudo mkdir open-source 
+          sudo mv _site/* open-source
+          sudo mv open-source _site/open-source
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
       - name: Undo Reshape
